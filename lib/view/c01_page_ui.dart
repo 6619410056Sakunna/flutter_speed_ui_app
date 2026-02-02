@@ -1,0 +1,40 @@
+import 'package:flutter/material.dart';
+
+class C01PageUI extends StatefulWidget {
+  const C01PageUI({super.key});
+
+  @override
+  State<C01PageUI> createState() => _C01PageUIState();
+}
+
+class _C01PageUIState extends State<C01PageUI> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Center(
+            child: Column(
+              children: [
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Icon(
+                      Icons.arrow_back_ios_new,
+                      size: 15.0, 
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
