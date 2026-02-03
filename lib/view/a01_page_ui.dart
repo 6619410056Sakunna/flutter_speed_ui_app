@@ -20,7 +20,7 @@ class _A01PageUIState extends State<A01PageUI> {
           child: Center(
             child: Column(
               children: [
-                Stack(
+                Stack(//ส่วนบนสีชมพูกับรูป
                   children: [
                     Container(
                       height: 463.0,
@@ -59,32 +59,41 @@ class _A01PageUIState extends State<A01PageUI> {
                 SizedBox(
                   height: 30.0,
                 ),
-                Text(
-                  'Discover Your',
+                Align(
+                  alignment:Alignment.center,
+                  child: Text(
+                    'Discover Your',
                   style: GoogleFonts.outfit(
                     fontSize: 30.0,
                     fontWeight: FontWeight.bold,
                     color: Color.fromRGBO(70, 68, 68, 1),
+                    ),
                   ),
                 ),
-                Text(
-                  'Own Dream House',
+                Align(
+                  alignment:Alignment.center,
+                  child: Text(
+                    'Own Dream House',
                   style: GoogleFonts.outfit(
                     fontSize: 30.0,
                     fontWeight: FontWeight.bold,
                     color: Color.fromRGBO(70, 68, 68, 1),
+                    ),
                   ),
                 ),
                 SizedBox(
                   height: 20.0,
                 ),
-                Text(
-                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam maecenas mi non sed ut odio. Non, justo, sed facilisi et. Eget viverra urna, vestibulum egestas faucibus egestas. Sagittis nam velit volutpat eu nunc.',
+                Align(
+                  alignment:Alignment.center,
+                  child: Text(
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam maecenas mi non sed ut odio. Non, justo, sed facilisi et. Eget viverra urna, vestibulum egestas faucibus egestas. Sagittis nam velit volutpat eu nunc.',
                   textAlign: TextAlign.center,
                   style: GoogleFonts.outfit(
                     fontSize: 13.0,
                     fontWeight: FontWeight.normal,
                     color: Color.fromRGBO(70, 68, 68, 1),
+                    ),
                   ),
                 ),
                 SizedBox(
