@@ -169,34 +169,108 @@ class _A02PageUIState extends State<A02PageUI> {
                 SizedBox(
                   height: 25.0,
                 ),
-                Text(
-                  'Or Sign up With',
+                Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        height: 2, // ความหนาของเส้น (เหมือน thickness)
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            begin: Alignment.centerRight, // เริ่มจากซ้าย
+                            end: Alignment.centerLeft,  // ไปขวา
+                            colors: [
+                              Color.fromARGB(255, 248, 154, 238), // ชมพูที่เลือกไว้
+                              Color.fromARGB(255, 255, 255, 255), // ไปจบที่สีขาว
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 8.0),
+                      child: Text('Or Sign up With'),
+                    ),
+                    Expanded(
+                      child: Container(
+                        height: 2, // ความหนาของเส้น (เหมือน thickness)
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            begin: Alignment.centerLeft, // เริ่มจากซ้าย
+                            end: Alignment.centerRight,  // ไปขวา
+                            colors: [
+                              Color.fromARGB(255, 248, 154, 238), // ชมพูที่เลือกไว้
+                              Color.fromARGB(255, 255, 255, 255), // ไปจบที่สีขาว
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
                 SizedBox(
                   height: 25.0,
                 ),
-                OutlinedButton(
-                  onPressed: () {},
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        'assets/icon/Google_logo.png',
-                        width: 20.0,
-                        height: 20.0,
-                        fit: BoxFit.cover,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    OutlinedButton(
+                      onPressed: () {},
+                      style: OutlinedButton.styleFrom(
+                        shape: CircleBorder(),
+                        padding: EdgeInsets.all(20),
+                        backgroundColor: Color.fromRGBO(236, 233, 236, 1),
+                        side: BorderSide(
+                          color: Color.fromARGB(255, 248, 154, 238),
+                          width: 2,
+                        ),
                       ),
-                    ],
-                  ),
-                  style: OutlinedButton.styleFrom(
-                    fixedSize: Size(
-                      MediaQuery.of(context).size.width,
-                      50.0,
+                      child: Image.asset(
+                        'assets/icon/Google_logo.png',
+                        width: 30.0,
+                        height: 30.0,
+                      ),
                     ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(180.0),
+                    SizedBox(
+                      width: 3.5,
                     ),
-                  ),
+                    OutlinedButton(
+                      onPressed: () {},
+                      style: OutlinedButton.styleFrom(
+                        shape: CircleBorder(),
+                        padding: EdgeInsets.all(20),
+                        backgroundColor: Color.fromRGBO(236, 233, 236, 1),
+                        side: BorderSide(
+                          color: Color.fromARGB(255, 248, 154, 238),
+                          width: 2,
+                        ),
+                      ),
+                      child: Image.asset(
+                        'assets/icon/Facebook01_logo.png',
+                        width: 30.0,
+                        height: 30.0,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 3.5,
+                    ),
+                    OutlinedButton(
+                      onPressed: () {},
+                      style: OutlinedButton.styleFrom(
+                        shape: CircleBorder(),
+                        padding: EdgeInsets.all(20),
+                        backgroundColor: Color.fromRGBO(236, 233, 236, 1),
+                        side: BorderSide(
+                          color: Color.fromARGB(255, 248, 154, 238),
+                          width: 2,
+                        ),
+                      ),
+                      child: Image.asset(
+                        'assets/icon/Apple logo.png',
+                        width: 30.0,
+                        height: 30.0,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),

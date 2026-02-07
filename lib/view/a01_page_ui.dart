@@ -127,7 +127,7 @@ class _A01PageUIState extends State<A01PageUI> {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8.0),
                         ),
-                        backgroundColor: Color.fromRGBO(248, 154, 238, 1),
+                        backgroundColor: Color.fromARGB(255, 248, 154, 238),
                       ),
                     ),
                     ElevatedButton(
