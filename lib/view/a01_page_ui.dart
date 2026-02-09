@@ -20,7 +20,7 @@ class _A01PageUIState extends State<A01PageUI> {
           child: Center(
             child: Column(
               children: [
-                Stack(//ส่วนบนสีชมพูกับรูป
+                Stack(
                   children: [
                     Container(
                       height: 463.0,
@@ -50,7 +50,7 @@ class _A01PageUIState extends State<A01PageUI> {
                         child: Icon(
                           Icons.arrow_back_ios_new,
                           size: 20.0,
-                          color: Colors.white,
+                          color: Color.fromARGB(255, 248, 154, 238),
                         ),
                       ),
                     ),
@@ -103,14 +103,7 @@ class _A01PageUIState extends State<A01PageUI> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => A02PageUI(),
-                          ),
-                        );
-                      },
+                      onPressed: () {},
                       child: Text(
                         'Sign in',
                         style: TextStyle(
@@ -131,7 +124,14 @@ class _A01PageUIState extends State<A01PageUI> {
                       ),
                     ),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => A02PageUI(),
+                          ),
+                        );
+                      },
                       child: Text(
                         'Register',
                         style: TextStyle(

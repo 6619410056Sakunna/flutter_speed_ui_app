@@ -1,17 +1,15 @@
-// ignore_for_file: sort_child_properties_last
-
 import 'package:flutter/material.dart';
-import 'package:flutter_speed_ui_app/view/b03_page_ui.dart';
+import 'package:flutter_speed_ui_app/view/b02_page_ui.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class B02PageUI extends StatefulWidget {
-  const B02PageUI({super.key});
+class B03PageUI extends StatefulWidget {
+  const B03PageUI({super.key});
 
   @override
-  State<B02PageUI> createState() => _B02PageUIState();
+  State<B03PageUI> createState() => _B03PageUIState();
 }
 
-class _B02PageUIState extends State<B02PageUI> {
+class _B03PageUIState extends State<B03PageUI> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,7 +74,7 @@ class _B02PageUIState extends State<B02PageUI> {
                 Align(
                   alignment: Alignment.center,
                   child: Text(
-                    'Login here',
+                    'Create Account',
                     style: GoogleFonts.poppins(
                       fontSize: 30.0,
                       fontWeight: FontWeight.w600,
@@ -85,25 +83,25 @@ class _B02PageUIState extends State<B02PageUI> {
                   ),
                 ),
                 SizedBox(
-                  height: 20.0,
+                  height: 15.0,
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: (50)),
+                  padding: EdgeInsets.symmetric(horizontal: (20)),
                   child: Align(
                     alignment: Alignment.center,
                     child: Text(
-                      'Welcome back you’ve been missed!',
+                      'Create an account so you can explore all the existing jobs',
                       textAlign: TextAlign.center,
                       style: GoogleFonts.poppins(
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.normal,
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.bold,
                         color: Color.fromRGBO(70, 68, 68, 1),
                       ),
                     ),
                   ),
                 ),
                 SizedBox(
-                  height: 50.0,
+                  height: 40.0,
                 ),
                 Container(
                   child: TextField(
@@ -111,8 +109,8 @@ class _B02PageUIState extends State<B02PageUI> {
                       filled: true,
                       fillColor: Color.fromRGBO(241, 244, 255, 1),
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15.0),
-                        borderSide: BorderSide(color: Color.fromRGBO(31, 65, 187, 1),),
+                        borderRadius: BorderRadius.circular(15.0),    
+                        borderSide: BorderSide(color: Color.fromRGBO(31, 65, 187, 1),),                    
                       ),
                       hintText: 'Email',
                       hintStyle: TextStyle(
@@ -121,6 +119,7 @@ class _B02PageUIState extends State<B02PageUI> {
                       contentPadding: EdgeInsets.symmetric(
                         vertical: 25.0,
                         horizontal: 20.0,
+
                       ),
                     ),
                   ),
@@ -151,19 +150,28 @@ class _B02PageUIState extends State<B02PageUI> {
                 SizedBox(
                   height: 15.0,
                 ),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'Forgot Password ?',
-                    style: GoogleFonts.outfit(
-                      fontSize: 15.0,
-                      fontWeight: FontWeight.bold,
-                      color: Color.fromRGBO(31, 65, 187, 1),
+                Container(
+                  child: TextField(
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Color.fromRGBO(241, 244, 255, 1),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                        borderSide: BorderSide.none,
+                      ),
+                      hintText: 'Confirm Password',
+                      hintStyle: TextStyle(
+                        color: Colors.grey[600],
+                      ),
+                      contentPadding: EdgeInsets.symmetric(
+                        vertical: 25.0,
+                        horizontal: 20.0,
+                      ),
                     ),
                   ),
                 ),
                 SizedBox(
-                  height: 15.0,
+                  height: 35.0,
                 ),
                 ElevatedButton(
                   onPressed: () {},
@@ -189,19 +197,19 @@ class _B02PageUIState extends State<B02PageUI> {
                   ),
                 ),
                 SizedBox(
-                  height: 25.0,
+                  height: 35.0,
                 ),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => B03PageUI(),
+                        builder: (context) => B02PageUI(),
                       ),
                     );
                   },
                   child: Text(
-                    'Create new account',
+                    'Already have an account',
                     style: GoogleFonts.poppins(
                       fontSize: 14,
                       fontWeight: FontWeight.normal,
@@ -229,7 +237,7 @@ class _B02PageUIState extends State<B02PageUI> {
                   child: Text(
                     'Or continue with',
                     textAlign: TextAlign.center,
-                    style: GoogleFonts.outfit(
+                    style: GoogleFonts.poppins(
                       fontSize: 13.0,
                       fontWeight: FontWeight.normal,
                       color: Color.fromRGBO(31, 65, 187, 1),

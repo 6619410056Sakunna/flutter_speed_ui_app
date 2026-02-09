@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/view/a01_page_ui.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class A02PageUI extends StatefulWidget {
@@ -19,18 +20,6 @@ class _A02PageUIState extends State<A02PageUI> {
           child: Center(
             child: Column(
               children: [
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: Icon(
-                      Icons.arrow_back_ios_new,
-                      size: 15.0,
-                    ),
-                  ),
-                ),
                 SizedBox(
                   height: 50.0,
                 ),
@@ -146,7 +135,14 @@ class _A02PageUIState extends State<A02PageUI> {
                   height: 15.0,
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => A01PageUI(),
+                      ),
+                    );
+                  },
                   child: Text(
                     'Sign in',
                     style: TextStyle(
@@ -173,14 +169,14 @@ class _A02PageUIState extends State<A02PageUI> {
                   children: [
                     Expanded(
                       child: Container(
-                        height: 2, // ความหนาของเส้น (เหมือน thickness)
+                        height: 2,
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
-                            begin: Alignment.centerRight, // เริ่มจากซ้าย
-                            end: Alignment.centerLeft,  // ไปขวา
+                            begin: Alignment.centerRight,
+                            end: Alignment.centerLeft,
                             colors: [
-                              Color.fromARGB(255, 248, 154, 238), // ชมพูที่เลือกไว้
-                              Color.fromARGB(255, 255, 255, 255), // ไปจบที่สีขาว
+                              Color.fromARGB(255, 248, 154, 238),
+                              Color.fromARGB(255, 255, 255, 255),
                             ],
                           ),
                         ),
@@ -192,14 +188,14 @@ class _A02PageUIState extends State<A02PageUI> {
                     ),
                     Expanded(
                       child: Container(
-                        height: 2, // ความหนาของเส้น (เหมือน thickness)
+                        height: 2,
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
-                            begin: Alignment.centerLeft, // เริ่มจากซ้าย
-                            end: Alignment.centerRight,  // ไปขวา
+                            begin: Alignment.centerLeft,
+                            end: Alignment.centerRight,
                             colors: [
-                              Color.fromARGB(255, 248, 154, 238), // ชมพูที่เลือกไว้
-                              Color.fromARGB(255, 255, 255, 255), // ไปจบที่สีขาว
+                              Color.fromARGB(255, 248, 154, 238),
+                              Color.fromARGB(255, 255, 255, 255),
                             ],
                           ),
                         ),
