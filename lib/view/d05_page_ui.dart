@@ -95,109 +95,40 @@ class _D05PageUIState extends State<D05PageUI> {
                   height: 30.0,
                 ),
                 Row(
-                  children: [
-                    Container(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: List.generate(4, (index) {
+                    return SizedBox(
+                      width: 60,
                       child: TextField(
+                        autofocus: index == 0,
+                        textAlign: TextAlign.center,
+                        keyboardType: TextInputType.number,
+                        maxLength: 1,
                         decoration: InputDecoration(
+                          counterText: "", 
                           filled: true,
                           fillColor: Color.fromRGBO(247, 248, 249, 1),
                           enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10.0),
+                            borderRadius: BorderRadius.circular(8.0),
                             borderSide: BorderSide(
                               color: Color.fromRGBO(232, 236, 244, 1),
                               width: 0.5,
                             ),
                           ),
-                          hintText: ' ',
-                          hintStyle: TextStyle(
-                            color: Colors.grey,
-                          ),
-                          contentPadding: EdgeInsets.symmetric(
-                            vertical: 15.0,
-                            horizontal: 15.0,
-                          ),
                         ),
+
+                        onChanged: (value) {
+                          if (value.length == 1 && index < 3) {
+                            FocusScope.of(context).nextFocus();
+                          }
+                          if (value.isEmpty && index > 0) {
+                            FocusScope.of(context)
+                                .previousFocus(); 
+                          }
+                        },
                       ),
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Container(
-                      child: TextField(
-                        decoration: InputDecoration(
-                          filled: true,
-                          fillColor: Color.fromRGBO(247, 248, 249, 1),
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10.0),
-                            borderSide: BorderSide(
-                              color: Color.fromRGBO(232, 236, 244, 1),
-                              width: 0.5,
-                            ),
-                          ),
-                          hintText: ' ',
-                          hintStyle: TextStyle(
-                            color: Colors.grey,
-                          ),
-                          contentPadding: EdgeInsets.symmetric(
-                            vertical: 15.0,
-                            horizontal: 15.0,
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Container(
-                      child: TextField(
-                        decoration: InputDecoration(
-                          filled: true,
-                          fillColor: Color.fromRGBO(247, 248, 249, 1),
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10.0),
-                            borderSide: BorderSide(
-                              color: Color.fromRGBO(232, 236, 244, 1),
-                              width: 0.5,
-                            ),
-                          ),
-                          hintText: ' ',
-                          hintStyle: TextStyle(
-                            color: Colors.grey,
-                          ),
-                          contentPadding: EdgeInsets.symmetric(
-                            vertical: 15.0,
-                            horizontal: 15.0,
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Container(
-                      child: TextField(
-                        decoration: InputDecoration(
-                          filled: true,
-                          fillColor: Color.fromRGBO(247, 248, 249, 1),
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10.0),
-                            borderSide: BorderSide(
-                              color: Color.fromRGBO(232, 236, 244, 1),
-                              width: 0.5,
-                            ),
-                          ),
-                          hintText: ' ',
-                          hintStyle: TextStyle(
-                            color: Colors.grey,
-                          ),
-                          contentPadding: EdgeInsets.symmetric(
-                            vertical: 15.0,
-                            horizontal: 15.0,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
+                    );
+                  }),
                 ),
                 SizedBox(
                   height: 30.0,
@@ -207,12 +138,12 @@ class _D05PageUIState extends State<D05PageUI> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => D05PageUI(),
+                        builder: (context) => D06PageUI(),
                       ),
                     );
                   },
                   child: Text(
-                    'Send Code',
+                    'Verify',
                     style: GoogleFonts.urbanist(
                       fontSize: 14.0,
                       fontWeight: FontWeight.bold,
@@ -229,37 +160,6 @@ class _D05PageUIState extends State<D05PageUI> {
                     ),
                     backgroundColor: Color.fromRGBO(30, 35, 44, 1),
                   ),
-                ),
-                SizedBox(
-                  height: 400.0,
-                ),
-                Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Remember Password ? ',
-                          style: GoogleFonts.outfit(
-                            fontSize: 13.0,
-                            fontWeight: FontWeight.normal,
-                            color: Colors.grey,
-                          ),
-                        ),
-                        TextButton(
-                          onPressed: () {},
-                          child: Text(
-                            ' Login',
-                            style: GoogleFonts.outfit(
-                              fontSize: 13.0,
-                              fontWeight: FontWeight.w600,
-                              color: Color.fromRGBO(53, 194, 193, 1),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
                 ),
               ],
             ),
